@@ -23,7 +23,7 @@
                     <div class="mb-md-5 mt-md-4 pb-5">
         
                       <h2 class="fw-bold mb-2 text-uppercase">Iniciar sesión</h2>
-                      <p class="text-white-50 mb-5">Por favor ingrese su usuario y contraseña</p>
+                      <p class="text-white-50 mb-5">Por favor ingrese su usuario o email y contraseña</p>
         
                       <div class="form-outline form-white mb-4">
                         <input type="text" id="typeEmailX" name="usuario" class="form-control form-control-lg" />
