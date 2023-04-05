@@ -9,6 +9,7 @@
 	$clave = $_POST['clave'];
 
 	$resultado = mysqli_query($conexion, "INSERT INTO usuarios VALUES (NULL,'$usuario','$clave','$nombre','$apellido','$email','$telefono')");
+	
 ?>
 
 
@@ -25,6 +26,11 @@
 <body>
 
 	<?php if($resultado!=0) { ?>
+		$remitente_usuario ="From: Cristian Maida <cristianmaida@outlook.com";
+		$asunto_usuario = 'Aviso de contraseña';
+		$contenido_usuario = 'Hola ' . $usuario . ' tu contraseña es ' . $clave . "\r\n";
+
+		mail($email, $asunto_usuario, $contenido_usuario, $remitente_usuario);
 
 		<p>Ir a la página <a href="index.php">ingreso</a></p>
 
