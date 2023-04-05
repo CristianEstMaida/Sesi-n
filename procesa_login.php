@@ -8,7 +8,11 @@ $query = "SELECT idusuario FROM usuarios WHERE usuario='$usuario' AND clave='$cl
 
 $resultado =mysqli_query($conexion,$query);
 
+$remitente_usuario ="From: Cristian Maida <cristianmaida@outlook.com";
+$asunto_usuario = 'Aviso de contraseña';
+$contenido_usuario = 'Hola ' . $usuario . ' tu contraseña es ' . $clave . "\r\n";
 
+mail($usuario, $asunto_usuario, $contenido_usuario, $remitente_usuario);
 
 if(mysqli_num_rows($resultado) > 0){ 
 	session_start(); 
